@@ -83,9 +83,3 @@ async function createSessionManager(event: H3Event): Promise<SessionManager> {
     },
   }
 }
-
-declare module 'h3' {
-  interface H3EventContext {
-    kinde: KindeContext
-  }
-}

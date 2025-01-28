@@ -7,6 +7,7 @@ import type { CookieSerializeOptions } from 'cookie-es'
 import { join } from 'pathe'
 
 import { version } from '../package.json'
+import type { KindeContext } from './runtime/types'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -173,3 +174,9 @@ export default defineNuxtModule<ModuleOptions>({
     })
   },
 })
+
+declare module 'h3' {
+  interface H3EventContext {
+    kinde: KindeContext
+  }
+}
