@@ -23,10 +23,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  middleware: ['auth-logged-in'],
-})
-
 const client = useKindeClient()
 
 const { data: permissions } = await useAsyncData(async () => {

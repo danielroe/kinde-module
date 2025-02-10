@@ -4,6 +4,11 @@ export type AuthState =
   { loggedIn: true, user: UserType } |
   { loggedIn: false, user: null }
 
+export type AccessResponse = {
+  access: boolean
+  redirectUrl?: string
+}
+
 type Slice<T extends Array<unknown>> = T extends [infer _A, ...infer B] ? B : never
 
 export type KindeContext = {
